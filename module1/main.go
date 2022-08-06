@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+func addTwoNumbers(a int, b int) int {
+	return a + b
+}
+
 func main() {
 	const fixedNum = 50               // 固定数字
 	var eventName = "LearningGOEvent" // イベント名
@@ -13,4 +17,6 @@ func main() {
 
 	fmt.Scan(&numberOfTickets) // チケット数を入力
 	fmt.Printf("You have purchased %v tickets\nTotal price will be: %v", numberOfTickets, (fixedNum * numberOfTickets))
+
+	fmt.Printf("The sum of %v and %v is %v\n", fixedNum, fixedNum, addTwoNumbers(fixedNum, numberOfTickets))
 }
